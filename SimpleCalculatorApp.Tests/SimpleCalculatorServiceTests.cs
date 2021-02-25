@@ -29,6 +29,9 @@ namespace SimpleCalculatorApp.Tests
 
         }
         [TestCase(0, 16, "+",16)]
+        //[TestCase(0, 5, "-", 5)]
+        //[TestCase(0, 7, "*", 7)]
+        [TestCase(0, 16, "/", 16)]
         public void Given_Empty_First_Number_Should_Return_Only_The_Second_Number(int firstNumber, int secondNumber, string Operator, int results)
         {
             //-----------------------------Arrange--------------------------

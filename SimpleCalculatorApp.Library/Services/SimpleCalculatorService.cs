@@ -16,10 +16,12 @@ namespace SimpleCalculatorApp.Library.Services
                 results = firstNumber + secondNumber;
             }
 
+
             if (Operator == "-")
             {
-                results = firstNumber - secondNumber;
+                results = firstNumber - secondNumber;      
             }
+
             if (Operator == "*")
             {
                 results = firstNumber * secondNumber;
@@ -30,6 +32,18 @@ namespace SimpleCalculatorApp.Library.Services
             }
 
             return results;
+        }
+
+        private static string[] Operators(string validOperator)
+        {
+            var supportedOperators = new List<string> { "/", "*", "+", "-" };
+            if (validOperator.Contains("supportedOperators") == false)
+            {
+                throw new ArithmeticException ("errror invalid operator");
+                throw new InvalidOperationException("Invalid operator");
+            }
+
+            return supportedOperators.ToArray();
         }
     }
 }
